@@ -12,6 +12,7 @@ with open('/Users/zgutadenis/Desktop/Work/CopyBot_Petrov/chats.csv', 'r') as fil
     #['ID_GROUP', '-23124513512']
         if len(row) == 2:
             chat_name, chat_id = row
+            #Можна забрати, бо у мене єбаний RTF-формат стояв
             chat_id = chat_id.strip().replace('\\', '')
             if chat_id.startswith('-'):
                 chats_to_listen_to.append(int(chat_id))
